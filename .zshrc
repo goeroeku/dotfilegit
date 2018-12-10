@@ -12,7 +12,8 @@ export TERM='xterm-256color'
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ## custom by aic
-POWERLEVEL9K_MODE='awesome-patched'
+#POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs newline)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 POWERLEVEL9K_SHOW_CHANGESET=true
@@ -92,8 +93,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 export NVM_LAZY_LOAD=true
 plugins=(
   git
-  nvm
-  npm
+  zsh-nvm
 )
 
 source $ZSH/oh-my-zsh.sh
