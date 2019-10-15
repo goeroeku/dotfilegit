@@ -132,6 +132,7 @@ export DEFAULT_USER="$USER"
 ## alias
 alias se="sudo gedit"
 alias rundoc="systemctl start docker"
+alias topdoc="systemctl stop docker"
 alias doc="docker $1"
 alias dor="docker-compose $1"
 alias rundro="react-native run-android"
