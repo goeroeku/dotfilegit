@@ -132,8 +132,21 @@ export DEFAULT_USER="$USER"
 ## alias
 alias se="sudo gedit"
 alias rundoc="systemctl start docker"
+alias doc="docker $1"
 alias dor="docker-compose $1"
 alias rundro="react-native run-android"
+alias abundle='rm android/app/src/main/assets/index.android.bundle && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/ && rm -rf android/app/src/main/res/drawable-xxxhdpi android/app/src/main/res/drawable-xxhdpi android/app/src/main/res/drawable-xhdpi android/app/src/main/res/drawable-mdpi android/app/src/main/res/drawable-hdpi && cd android && ./gradlew assembleRelease'
 alias lcd="intel-virtual-output"
 alias setclip="xclip -selection c"
 alias getclip="xclip -selection c -o"
+alias updonk="sudo pacman -Syyu && yay -Syyu --aur"
+alias bersih="sudo pacman -Rsn $(pacman -Qdtq)"
+alias py="python $1"
+alias py2="python2 $1"
+## alias ssh
+alias sshlab="ssh timit@171.16.0.36"
+#alias sshlab="ssh timit@36.66.190.197"
+alias sshpbg="ssh simpatda@192.168.20.20"
+alias sshvbox="ssh timit@192.168.56.105"
+## VPN Telkom
+alias vpntelkom="sudo openconnect --protocol=gp --usergroup=portal global.telkom.co.id -u 830015"
