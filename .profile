@@ -16,6 +16,13 @@ export PATH=$PATH:$HOME/.config/composer/vendor/bin
 export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
 export PATH=$PATH:$HOME/.yarn/bin
 
+## set brew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+
+## symfony path
+export PATH="$HOME/.symfony/bin:$PATH"
+
 ## set Golang Home
 export GOPATH=$HOME/GoLang
 export PATH=$PATH:$GOPATH/bin
