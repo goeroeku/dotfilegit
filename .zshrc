@@ -154,3 +154,7 @@ alias sshpbg="ssh simpatda@192.168.20.20"
 alias sshvbox="ssh timit@192.168.56.105"
 ## VPN Telkom
 alias vpntelkom="sudo openconnect --protocol=gp --usergroup=portal global.telkom.co.id -u 830015"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/aic/.sdkman"
+[[ -s "/home/aic/.sdkman/bin/sdkman-init.sh" ]] && source "/home/aic/.sdkman/bin/sdkman-init.sh"

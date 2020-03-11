@@ -12,7 +12,7 @@ Backup file config, profile dll
 #### set utilities
 1) nvm
 ```
-yaourt -S nvm
+yay -S nvm
 mkdir -p $HOME/.nvm
 export NVM_DIR="$HOME/.nvm"
 ln -sf /usr/share/nvm/nvm.sh $NVM_DIR
