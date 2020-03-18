@@ -1,4 +1,5 @@
-export EDITOR=/usr/bin/nano
+export VISUAL=nano
+export EDITOR="$VISUAL"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 ## java
