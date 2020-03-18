@@ -96,6 +96,9 @@ plugins=(
   zsh-nvm
 )
 
+## autoload feature
+autoload zmv
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -128,6 +131,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export DEFAULT_USER="$USER"
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 ## alias
 alias se="sudo gedit"

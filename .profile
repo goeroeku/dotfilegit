@@ -7,6 +7,7 @@ export STUDIO_JDK=/usr/lib/jvm/default
 
 ## android programming
 export ANDROID_HOME=/home/aic/AndroidSDK
+export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/21.0.6113669
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
