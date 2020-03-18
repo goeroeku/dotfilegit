@@ -1,4 +1,4 @@
-export VISUAL=nano
+export VISUAL=vim
 export EDITOR="$VISUAL"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
