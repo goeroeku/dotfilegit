@@ -134,6 +134,9 @@ export DEFAULT_USER="$USER"
 
 ## alias
 alias se="sudo gedit"
+alias upmirror="sudo pacman-mirrors --fasttrack && sudo pacman -Syyu"
+alias s="systemctl"
+alias kl="kubectl"
 alias rundoc="systemctl start docker"
 alias topdoc="systemctl stop docker"
 alias doc="docker $1"
@@ -150,6 +153,7 @@ alias py2="python2 $1"
 alias pas="php artisan serve $1"
 alias pam="php artisan migrate:reset && php artisan migrate && php artisan db:seed"
 alias sym="symfony $1"
+alias kup="kubectl proxy"
 ## alias ssh
 alias sshlab="ssh timit@171.16.0.36"
 #alias sshlab="ssh timit@36.66.190.197"
@@ -161,3 +165,4 @@ alias vpntelkom="sudo openconnect --protocol=gp --usergroup=portal global.telkom
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/aic/.sdkman"
 [[ -s "/home/aic/.sdkman/bin/sdkman-init.sh" ]] && source "/home/aic/.sdkman/bin/sdkman-init.sh"
+[[ /home/linuxbrew/.linuxbrew/bin/kubectl ]] && source <(kubectl completion zsh)

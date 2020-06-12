@@ -6,6 +6,9 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_HOME=/usr/lib/jvm/default
 export STUDIO_JDK=/usr/lib/jvm/default
 
+# spand
+export PATH=$PATH:/var/lib/snapd/snap/bin
+
 ## android programming
 export ANDROID_HOME=/home/aic/AndroidSDK
 export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/21.0.6113669
@@ -23,8 +26,8 @@ export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
 export PATH=$PATH:$HOME/.yarn/bin
 
 ## set brew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+#eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+#export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 
 ## symfony path
 export PATH=$PATH:$HOME/.symfony/bin
