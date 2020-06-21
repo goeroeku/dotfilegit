@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 ## set terminal color by aic
 export TERM='xterm-256color'
 
@@ -11,30 +18,10 @@ export TERM='xterm-256color'
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
 ## custom by aic
-#POWERLEVEL9K_MODE='awesome-patched'
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs newline)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-POWERLEVEL9K_SHOW_CHANGESET=true
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_STATUS_VERBOSE=false
-#POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
-#POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
-#POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='black'
-#POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
-#POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='white'
-#POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
-#POWERLEVEL9K_VCS_UNTRACKED_ICON='\u25CF'
-#POWERLEVEL9K_VCS_UNSTAGED_ICON='\u00b1'
-#POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON='\u2193'
-#POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\u2191'
-#POWERLEVEL9K_VCS_COMMIT_ICON="\uf417"
-#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%f "
+POWERLEVEL9K_MODE="nerdfont-complete"
 ## end aic
-ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -94,6 +81,7 @@ export NVM_LAZY_LOAD=true
 plugins=(
   git
   zsh-nvm
+  zsh-autosuggestions
 )
 
 ## autoload feature
@@ -166,3 +154,7 @@ alias vpntelkom="sudo openconnect --protocol=gp --usergroup=portal global.telkom
 export SDKMAN_DIR="/home/aic/.sdkman"
 [[ -s "/home/aic/.sdkman/bin/sdkman-init.sh" ]] && source "/home/aic/.sdkman/bin/sdkman-init.sh"
 [[ /home/linuxbrew/.linuxbrew/bin/kubectl ]] && source <(kubectl completion zsh)
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
